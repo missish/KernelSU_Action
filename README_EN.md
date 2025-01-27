@@ -123,9 +123,9 @@ Enable KernelSU for troubleshooting kernel failures or compiling the kernel sepa
 
 Select the branch or tag of KernelSU:
 
-- ~~main branch (development version): `KERNELSU_TAG=main`~~
-- Latest TAG (stable version): `KERNELSU_TAG=v0.9.5`
-- Specify the TAG (such as `v0.5.2`): `KERNELSU_TAG=v0.5.2`
+- ~~main branch (development version): `KERNELSU-Next_TAG=main`~~
+- Latest TAG (stable version): `KERNELSU-Next_TAG=v0.9.5`
+- Specify the TAG (such as `v0.5.2`): `KERNELSU-Next_TAG=v0.5.2`
 
 #### KernelSU Manager signature size and hash
 

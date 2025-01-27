@@ -87,11 +87,10 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 | ---------- | ----------------- | --------------- |
 | 12.0.5 | Android S | r416183b |
 | 14.0.6 | Android T | r450784d |
-| 14.0.7 |               | r450784e |
-| 15.0.1 |               | r458507 |
-| 17.0.1 |               | r487747b |
+| 14.0.7 | | r450784e |
+| 15.0.1 | | r458507 |
+| 17.0.1 | | r487747b |
 | 17.0.2 | Android U | r487747c |
-
 
 一般 Clang12 就能通过大部分 4.14 及以上的内核的编译
 我自己的 MI 6X 4.19 使用的是 r450784d
@@ -123,19 +122,19 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 
 选择 KernelSU 的分支或 tag:
 
-- ~~main 分支(开发版): `KERNELSU_TAG=main`~~
-- 最新 TAG(稳定版): `KERNELSU_TAG=v0.9.5`
-- 指定 TAG(如`v0.5.2`): `KERNELSU_TAG=v0.5.2`
+- ~~main 分支(开发版): `KERNELSU-Next_TAG=main`~~
+- 最新 TAG(稳定版): `KERNELSU-Next_TAG=v0.9.5`
+- 指定 TAG(如`v0.5.2`): `KERNELSU-Next_TAG=v0.5.2`
 
 #### KernelSU Manager signature size and hash
 
-自定义KernelSU管理器签名的size值和hash值，如果不需要自定义管理器则请留空或填入官方默认值：
+自定义 KernelSU 管理器签名的 size 值和 hash 值，如果不需要自定义管理器则请留空或填入官方默认值：
 
 `KSU_EXPECTED_SIZE=0x033b`
 
 `KSU_EXPECTED_HASH=c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6`
 
-可键入`ksud debug get-sign <apk_path>`获取apk签名的size值和hash值
+可键入`ksud debug get-sign <apk_path>`获取 apk 签名的 size 值和 hash 值
 
 ### Disable LTO
 
@@ -143,7 +142,7 @@ LTO 用于优化内核，但有些时候会导致错误
 
 ### Disable CC_WERROR
 
-用于修复某些不支持或关闭了Kprobes的内核，修复KernelSU未检测到开启Kprobes的变量抛出警告导致错误
+用于修复某些不支持或关闭了 Kprobes 的内核，修复 KernelSU 未检测到开启 Kprobes 的变量抛出警告导致错误
 
 ### Add Kprobes Config
 
@@ -159,7 +158,7 @@ LTO 用于优化内核，但有些时候会导致错误
 如果 kprobe 工作不正常（通常是上游的 bug 或者内核版本过低），那你可以尝试启用此参数
 
 自动修改内核源码以支持 KernelSU  
-参见：[如何为非GKI设备集成 KernelSU](https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html#modify-kernel-source-code)
+参见：[如何为非 GKI 设备集成 KernelSU](https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html#modify-kernel-source-code)
 
 ### Remove unused packages
 
